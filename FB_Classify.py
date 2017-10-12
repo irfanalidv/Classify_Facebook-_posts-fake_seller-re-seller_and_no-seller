@@ -9,6 +9,8 @@ import numpy as np
 
 from sklearn.naive_bayes import MultinomialNB,GaussianNB
 from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.feature_extraction.text import TfidfVectorizer
+
 from sklearn.svm import SVC
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
@@ -125,4 +127,44 @@ svc.fit(X_train,y_train)
 result_svc= svc.predict(X_test)
 
 accuracy_score(result_svc,y_test)
+
+
+# In[12]:
+
+#https://en.wikipedia.org/wiki/Tf%E2%80%93idf
+tfidf_vect = TfidfVectorizer(ngram_range=(2,2))
+
+X_train1 = tfidf_vect.fit_transform(x_train)
+X_test1 = tfidf_vect.transform(x_test)
+
+
+# In[13]:
+
+#Logistic Regression_tf_idf
+lr_tf_idf = LogisticRegression()
+lr_tf_idf.fit(X_train1, y_train)
+
+
+# In[14]:
+
+y_pred_lr1 = lr_tf_idf.predict_proba(X_test1)[:, 1]
+#when_used_tf_idf
+accuracy_score(y_test,y_pred_lr1.round())
+
+
+# In[15]:
+
+#Logistic Regression
+lr = LogisticRegression()
+lr.fit(X_train, y_train)
+
+
+# In[16]:
+
+y_pred_lr = lr.predict_proba(X_test)[:, 1]
+
+
+# In[17]:
+
+accuracy_score(y_test,y_pred_lr.round())
 
