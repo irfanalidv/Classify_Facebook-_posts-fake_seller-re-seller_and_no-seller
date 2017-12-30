@@ -1,7 +1,16 @@
 Classification Using Apache Spark Please look at https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/6974851263301701/550720149541967/6267955876615859/latest.html
 
+[Using NaiveBayes in Spark] Accuracy of model at predicting the Post was: 0.796022991694
+
 # Classify_Facebook-_posts-fake_seller-re-seller_and_no-seller
 Classify Facebook posts into three categories: fake_seller, re-seller, no-seller.
+
+Using sklearn : 
+
+MultinomialNB accuracy_score  : 0.83983383337179784
+SVC accuracy_score            : 0.82183244864989613
+Logistic Regression_tf_idf    : 0.59912300946226638
+Logistic_Regression_No_tf_idf : 0.62474036464343408
 
 
 Useful Resources 
