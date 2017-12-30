@@ -7,10 +7,10 @@ Classify Facebook posts into three categories: fake_seller, re-seller, no-seller
 
 Using sklearn : 
 
-MultinomialNB accuracy_score  : 0.83983383337179784
-SVC accuracy_score            : 0.82183244864989613
-Logistic Regression_tf_idf    : 0.59912300946226638
-Logistic_Regression_No_tf_idf : 0.62474036464343408
+MultinomialNB accuracy_score : 0.83983383337179784 ||  
+SVC accuracy_score           : 0.82183244864989613 || 
+Logistic Regression_tf_idf   : 0.59912300946226638 || 
+Logistic_Regression_No_tf_idf : 0.62474036464343408 || 
 
 
 Useful Resources 
